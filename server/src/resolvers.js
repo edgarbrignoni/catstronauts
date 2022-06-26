@@ -4,7 +4,7 @@ const resolvers = {
     tracksForHome: (_, __, { dataSources }) => {
       return dataSources.trackAPI.getTracksForHome();
     },
-    track: (parent, { id }, { dataSources }, info) => {
+    track: (_, { id }, { dataSources }) => {
       return dataSources.trackAPI.getTrack(id);
     }
   },
