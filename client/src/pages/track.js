@@ -34,7 +34,7 @@ const Track = ({ trackId }) => {
   return (
     <Layout>
       <QueryResult error={error} loading={loading} data={data}>
-        {/* this is where our component displaying the data will go */}
+        <TrackDetail track={data?.track} />
       </QueryResult>
     </Layout>
   );
