@@ -27,6 +27,8 @@ export const GET_TRACK = gql`
 `;
 
 const Track = ({ trackId }) => {
+  const { loading, error, data } = useQuery();
+
   return <Layout></Layout>;
 };
 
