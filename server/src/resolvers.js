@@ -6,7 +6,7 @@ const resolvers = {
     }
   },
   Track: {
-    author: (parent, args, context, info) => {}
+    author: (parent, _, { dataSources }) => {}
   }
 };
 
