@@ -12,7 +12,7 @@ const TrackCard = ({ track }) => {
   const { title, thumbnail, author, length, modulesCount, id } = track;
 
   return (
-    <CardContainer>
+    <CardContainer to={`/track/${id}`}>
       <CardContent>
         <CardImageContainer>
           <CardImage src={thumbnail} alt={title} />
