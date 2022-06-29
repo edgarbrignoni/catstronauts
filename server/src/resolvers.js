@@ -20,7 +20,7 @@ const resolvers = {
         };
       } catch (err) {
         return {
-          // we'll return a new object here
+          code: err.extensions.response.status
         };
       }
     }
