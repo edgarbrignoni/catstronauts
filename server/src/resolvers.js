@@ -20,7 +20,8 @@ const resolvers = {
         };
       } catch (err) {
         return {
-          code: err.extensions.response.status
+          code: err.extensions.response.status,
+          success: false
         };
       }
     }
