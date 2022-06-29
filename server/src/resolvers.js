@@ -9,7 +9,9 @@ const resolvers = {
     }
   },
   Mutation: {
-    incrementTrackViews: (parent, args, context, info) => {}
+    incrementTrackViews: (_, { id }, { dataSources }) => {
+      // where we'll call the TrackAPI
+    }
   },
   Track: {
     author: ({ authorId }, _, { dataSources }) => {
