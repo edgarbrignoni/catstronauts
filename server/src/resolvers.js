@@ -22,7 +22,8 @@ const resolvers = {
         return {
           code: err.extensions.response.status,
           success: false,
-          message: err.extensions.response.body
+          message: err.extensions.response.body,
+          track: null
         };
       }
     }
