@@ -10,14 +10,19 @@ const resolvers = {
   },
   Mutation: {
     incrementTrackViews: async (_, { id }, { dataSources }) => {
-      const track = await dataSources.trackAPI.incrementTrackViews(id);
-
-      return {
-        code: 200,
-        success: true,
-        message: `Successfully incremented number of views for track ${id}`,
-        track
-      };
+      try {
+        const track = await dataSources.trackAPI.incrementTrackViews(id);
+        return {
+          code: 200,
+          success: true,
+          message: `Successfully incremented number of views for track ${id}`,
+          track
+        };
+      } catch (err) {
+        return {
+          // we'll return a new object here
+        };
+      }
     }
   },
   Track: {
