@@ -6,6 +6,24 @@ import { Link } from "@reach/router";
 import { gql, useMutation } from "@apollo/client";
 
 /**
+ * Mutation to increment a track's number of views
+ * (exported for tests)
+ */
+export const INCREMENT_TRACK_VIEWS = gql`
+  mutation IncrementTrackViewsMutation($incrementTrackViewsId: ID!) {
+    incrementTrackViews(id: $incrementTrackViewsId) {
+      code
+      success
+      message
+      track {
+        id
+        numberOfViews
+      }
+    }
+  }
+`;
+
+/**
  * Track Card component renders basic info in a card format
  * for each track populating the tracks grid homepage.
  */
