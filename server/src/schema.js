@@ -12,6 +12,10 @@ const typeDefs = gql`
     incrementTrackViews(id: ID!)
   }
 
+  type IncrementTrackViewsResponse {
+
+  }
+
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
