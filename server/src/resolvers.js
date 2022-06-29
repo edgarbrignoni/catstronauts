@@ -9,8 +9,8 @@ const resolvers = {
     }
   },
   Mutation: {
-    incrementTrackViews: (_, { id }, { dataSources }) => {
-      dataSources.trackAPI.incrementTrackViews(id);
+    incrementTrackViews: async (_, { id }, { dataSources }) => {
+      const track = await dataSources.trackAPI.incrementTrackViews(id);
     }
   },
   Track: {
