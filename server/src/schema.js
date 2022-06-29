@@ -8,6 +8,10 @@ const typeDefs = gql`
     track(id: ID!): Track
   }
 
+  type Mutation {
+
+  }
+  
   "A track is a group of Modules that teaches about a specific topic"
   type Track {
     id: ID!
