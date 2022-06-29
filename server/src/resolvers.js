@@ -10,7 +10,7 @@ const resolvers = {
   },
   Mutation: {
     incrementTrackViews: (_, { id }, { dataSources }) => {
-      // where we'll call the TrackAPI
+      dataSources.trackAPI.incrementTrackViews(id);
     }
   },
   Track: {
